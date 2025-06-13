@@ -25,5 +25,7 @@ def tirar_dado(request):
     }    
     return render(request, 'core/dados.html', context=datos)
 
-
-# Create your views here.
+def ejercicio(request):
+    nombre = input("NOMBRE: ")
+    apellido = input("APELLIDO: ")
+    return render(request, "core/ejercicio.html", {"nombre": nombre, "apellido": apellido})
