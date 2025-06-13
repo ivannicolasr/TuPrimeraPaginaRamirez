@@ -23,4 +23,5 @@ urlpatterns = [
     path('index/', views.index),
     path('admin/', admin.site.urls),
     path('saludar/', views.saludar),
+    path('tirar-dado/', views.tirar_dado),
 ]
