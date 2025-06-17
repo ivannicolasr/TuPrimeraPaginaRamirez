@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Blog{% endblock %}</title>
+</head>
+<body>
+    <h1>Mi Blog</h1>
+    <nav>
+        <a href="{% url 'crear_autor' %}">Crear Autor</a> |
+        <a href="{% url 'crear_categoria' %}">Crear Categoría</a> |
+        <a href="{% url 'crear_articulo' %}">Crear Artículo</a> |
+        <a href="{% url 'buscar_articulos' %}">Buscar Artículos</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

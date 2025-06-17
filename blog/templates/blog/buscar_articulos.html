@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2>Buscar Artículos</h2>
+<form method="get">
+    <input type="text" name="q" placeholder="Buscar por título" value="{{ query }}">
+    <button type="submit">Buscar</button>
+</form>
+<ul>
+    {% for articulo in resultados %}
+        <li>{{ articulo.titulo }} - {{ articulo.autor.nombre }} ({{ articulo.categoria.nombre }})</li>
+    {% empty %}
+        <li>No se encontraron resultados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
